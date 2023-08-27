@@ -1,6 +1,10 @@
+using Npgsql;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+//string connectionString = "Host=localhost;Database=desafio_ES3;Username=postgres;Password=postgres123";
+
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
