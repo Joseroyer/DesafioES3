@@ -16,7 +16,7 @@ async function confirmar() {
 
     var novo = JSON.stringify(objeto);
 
-    fetch(url, { method: "post", body: novo, headers: { "content-type": "application/json" } })
+    fetch(url, {method: "post", body: novo, headers: {"content-type": "application/json"}})
         .then(response => response.json())
         .finally(() => carregarTabela());
 
@@ -33,8 +33,7 @@ async function apagar(id) {
         try {
             await fetch(url);
             carregarTabela();
-        }
-        catch (Exception) {
+        } catch (Exception) {
             alert("Erro ao apagar" + error);
         }
     }
@@ -48,8 +47,7 @@ async function alterar(id) {
         document.getElementById("id").value = cidade.id;
         document.getElementById("estado").value = cidade.estado.id;
         document.getElementById("nome").value = cidade.nome;
-    }
-    catch (Exception) {
+    } catch (Exception) {
         alert("Erro ao recuperar dados: " + error);
     }
 }
@@ -72,8 +70,6 @@ function carregarTabela() {
         })
     document.forms[0].reset();
 }
-
-
 
 
 function carregarTipo() {
