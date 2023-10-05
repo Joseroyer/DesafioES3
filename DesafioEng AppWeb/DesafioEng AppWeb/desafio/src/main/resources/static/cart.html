@@ -18,6 +18,8 @@
 	<link href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap" rel="stylesheet">
 	<!-- fontawesome -->
 	<link rel="stylesheet" href="assets/css/all.min.css">
+	<!--CSS da Modal-->
+	<link rel="stylesheet" href="assets/css/modalFrete.css">
 	<!-- bootstrap -->
 	<link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
 	<!-- owl carousel -->
@@ -250,7 +252,8 @@
 
 									<!-- Cabeçalho do Modal -->
 									<div class="modal-header">
-										<h4 class="modal-title">Cálculo de frete</h4>
+										<!-- Estilize o título aqui -->
+										<h4 class="modal-title">Cálculo de Frete</h4>
 										<button type="button" class="close" data-dismiss="modal">&times;</button>
 									</div>
 
@@ -260,19 +263,21 @@
 										<form>
 											<div class="form-group">
 												<label for="pesoProduto">Peso do Produto (kg):</label>
-												<input type="number" class="form-control" id="pesoProduto" placeholder="Informe o peso do produto">
+												<!-- Adicione o atributo "min" para evitar valores negativos -->
+												<input type="number" class="form-control" id="pesoProduto" placeholder="Peso" min="0">
 											</div>
 											<div class="form-group">
 												<label for="distancia">Distância (km):</label>
-												<input type="number" class="form-control" id="distancia" placeholder="Informe a distância">
+												<!-- Adicione o atributo "min" para evitar valores negativos -->
+												<input type="number" class="form-control" id="distancia" placeholder="Distância" min="0">
 											</div>
 										</form>
 									</div>
 
 									<!-- Rodapé do Modal -->
 									<div class="modal-footer">
-										<button type="button" class="btn btn-primary">Calcular</button>
-										<button type="button" class="btn btn-danger" data-dismiss="modal">Fechar</button>
+										<button type="button" class="btn" style="background-color: #007bff; border-radius: 50px; color: #fff;">Calcular Frete</button>
+										<button type="button" class="btn" style="background-color: #dc3545; border-radius: 50px; color: #fff;" data-dismiss="modal">Fechar</button>
 									</div>
 
 								</div>
