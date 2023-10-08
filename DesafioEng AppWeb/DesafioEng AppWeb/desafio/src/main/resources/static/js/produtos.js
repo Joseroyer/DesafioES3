@@ -151,7 +151,7 @@ function atualizarSubTotalETotal() {
         var preco = parseFloat(precoSpan.textContent.replace("R$", "").replace(",", "."));
         subTotal += quantidade * preco;
     });
-    carregarSubTotalAndTotal(subTotal);
+    carregarSubTotalAndTotal(subTotal,true);
 
 }
 
