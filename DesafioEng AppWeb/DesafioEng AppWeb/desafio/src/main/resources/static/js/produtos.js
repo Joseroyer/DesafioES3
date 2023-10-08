@@ -10,6 +10,32 @@ class Produto {
     }
 }
 
+class Frete {
+    constructor() {
+        this.peso = document.getElementById("pesoProduto").value;
+        this.distancia = document.getElementById("distancia").value;
+    }
+}
+
+async function calcularFrete() {
+    var objeto = new Frete();
+    var url = `http://localhost:8080/Venda/calcularFrete`;
+    var novo = JSON.stringify(objeto);
+
+    fetch(url, {method: "post", body: novo, headers: {"content-type": "application/json"}})
+        .then(response => response.json())
+        .then(data =>{
+            console.log(data);
+        })
+        .finally(() =>
+            document.getElementById("ModalFrete").style.display = "display"
+        );
+    // console.log(response);
+
+    //metodo de mudar o valor do frete
+
+}
+
 function carregarSubTotalAndTotal(subTotal) {
     let subtotal = subTotal.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'});
     let frete;
@@ -18,7 +44,7 @@ function carregarSubTotalAndTotal(subTotal) {
         <tr class="total-data">
             <td><strong>Subtotal: </strong></td>
             <td id="subTotal">${subtotal}</td>
-        </tr>
+        </tr> 
         <tr class="total-data">
             <td><strong>Valor da Entrega: </strong></td>
             <td id="valorEntrega">R$ 0</td>
