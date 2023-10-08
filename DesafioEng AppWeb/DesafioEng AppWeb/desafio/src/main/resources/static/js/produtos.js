@@ -35,7 +35,7 @@ function calcularFrete() {
         })
     $("#tr_formaEntrega").show();
     $("#tr_prazo").show();
-    carregarSubTotalAndTotal(subTotalP, true);
+    // carregarSubTotalAndTotal(subTotalP, true);
 
 
 }
@@ -120,10 +120,9 @@ function carregarTabelaProduto() {
                 quantidadeInput.addEventListener("input", atualizarQuantidade);
             });
             subTotalP = subTotal;
-            carregarSubTotalAndTotal(subTotal, false);
+            carregarSubTotalAndTotal(subTotal, true);
 
         })
-    // document.forms[0].reset();
 }
 
 function atualizarQuantidade() {
