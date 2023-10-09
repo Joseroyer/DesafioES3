@@ -95,7 +95,7 @@ function carregarSubTotalAndTotal(subTotal, flag) {
 }
 
 function carregarTabelaProduto() {
-    let url = `http://localhost:8080/Produto/produtos?filtro=`;
+    let url = `http://localhost:8080/Venda/produtos?filtro=`;
     let subTotal = 0;
     fetch(url).then(response => response.json())
         .then(data => {

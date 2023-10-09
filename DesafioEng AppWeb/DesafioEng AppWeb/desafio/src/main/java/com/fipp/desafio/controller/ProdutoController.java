@@ -32,8 +32,5 @@ public class ProdutoController {
         return ResponseEntity.ok(produtoControll.selectProduto(id));
     }
 
-    @GetMapping("/produtos")
-    public ResponseEntity<Object> selectCidades(@RequestParam(value = "filtro") String filtro) throws Exception {
-        return ResponseEntity.ok(produtoControll.selectProdutos(filtro));
-    }
+
 }
